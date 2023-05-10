@@ -17,13 +17,18 @@ public class PhotoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo);
 
+        //pegando a toolbar pelo id
         Toolbar toolbar = findViewById(R.id.tbPhoto);
+        //configurando a toolbar como a barra de ferramentas padrao
         setSupportActionBar(toolbar);
 
+        //pegando actionbar
         ActionBar actionBar = getSupportActionBar();
+        //inserindo o botao de voltar na actionbar
         actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
+    //metodo que cria as opcoes de menu, com base no arquivo de menu passado como parametro
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         super.onCreateOptionsMenu(menu);
@@ -32,6 +37,7 @@ public class PhotoActivity extends AppCompatActivity {
         return true;
     }
 
+    //metodo que gerencia quais acoes sao realizadas quando um clicam em um botao
     @Override
     public boolean onOptionsItemsSelected(@NonNull MenuItem item){
         switch (item.getItemId()){
