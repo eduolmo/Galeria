@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import olmo.eduardo.galeria.MainActivity;
+import olmo.eduardo.galeria.activity.MainActivity;
 import olmo.eduardo.galeria.R;
 import olmo.eduardo.galeria.util.Util;
 

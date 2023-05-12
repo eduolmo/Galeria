@@ -1,16 +1,24 @@
-package olmo.eduardo.galeria;
+package olmo.eduardo.galeria.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ImageView;
+
+import olmo.eduardo.galeria.R;
+import olmo.eduardo.galeria.util.Util;
 
 public class PhotoActivity extends AppCompatActivity {
+
+    String photoPath;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +34,18 @@ public class PhotoActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         //inserindo o botao de voltar na actionbar
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+        //pegando intent
+        Intent i = getIntent();
+        //pegando o camimnho da foto selecionada, que estava armazenada na intent
+        photoPath = i.getStringExtra("photo_path");
+
+        //salvando a foto em um bitmap
+        Bitmap bitmap = Util.getBitmap("photo_path");
+        //pegando o imPhoto
+        ImageView imPhoto = findViewById(R.id.imPhoto);
+        //colocando a imagem salva no bitmap dentro do imPhoto
+        imPhoto.setImageBitmap(bitmap);
     }
 
     //metodo que cria as opcoes de menu, com base no arquivo de menu passado como parametro
@@ -47,7 +67,6 @@ public class PhotoActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-
     }
 
 }
