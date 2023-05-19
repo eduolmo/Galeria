@@ -45,7 +45,7 @@ public class PhotoActivity extends AppCompatActivity {
         photoPath = i.getStringExtra("photo_path");
 
         //salvando a foto em um bitmap
-        Bitmap bitmap = Util.getBitmap("photo_path");
+        Bitmap bitmap = Util.getBitmap(photoPath);
         //pegando o imPhoto
         ImageView imPhoto = findViewById(R.id.imPhoto);
         //colocando a imagem salva no bitmap dentro do imPhoto

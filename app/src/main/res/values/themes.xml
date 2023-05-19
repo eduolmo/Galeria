@@ -3,8 +3,8 @@
     <!--estabelencendo que nao tem ActionBar padrao-->
     <style name="Theme.Galeria" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#00EEAB</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">#9EE7FD</item>
+        <item name="colorPrimaryVariant">#0098C6</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

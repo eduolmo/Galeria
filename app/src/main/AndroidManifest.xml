@@ -36,7 +36,7 @@
         </activity>
 
         <provider
-            android:authorities="olmo.eduardo.fileprovider"
+            android:authorities="olmo.eduardo.galeria.fileprovider"
             android:name="androidx.core.content.FileProvider"
             android:exported="false"
             android:grantUriPermissions="true">

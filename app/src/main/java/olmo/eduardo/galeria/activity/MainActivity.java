@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
         //criando nova Intent para a PhotoActivity
         Intent i = new Intent(MainActivity.this, PhotoActivity.class);
         //colocando o caminho para a imagem dentro da Intent
-        i.putExtra("Photo_path", photoPath);
+        i.putExtra("photo_path", photoPath);
         //iniciando a PhotoActivity
         startActivity(i);
     }
